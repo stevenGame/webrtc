@@ -1,9 +1,13 @@
-# webrtcdemo
+# webrtc demo
 
 > vue
 
 ## Build Setup
 
+```bash
+# run chat audio/video file server
+$ npm run server
+```
 ``` bash
 # install dependencies
 npm install

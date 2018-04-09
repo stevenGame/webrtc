@@ -1,37 +1,37 @@
 <template>
   <div id="app">
-    <!-- 创建聊天UI -->
-    <!-- 
-      1. 显示聊天的发送的按钮
-      2. 切换聊天文字聊天和语音聊天
-      3. 显示聊天信息
-     -->
+    <!--&lt;!&ndash; 创建聊天UI &ndash;&gt;-->
+    <!--&lt;!&ndash; -->
+      <!--1. 显示聊天的发送的按钮-->
+      <!--2. 切换聊天文字聊天和语音聊天-->
+      <!--3. 显示聊天信息-->
+     <!--&ndash;&gt;-->
 
-     <div class="chat-container">
-       <div class="chat-left"></div>
-       <div class="chat-right">
-         <h2>测试</h2>
-       </div>
-     </div>
+     <!--<div class="chat-container">-->
+       <!--<div class="chat-left"></div>-->
+       <!--<div class="chat-right">-->
+         <!--<h2>测试</h2>-->
+       <!--</div>-->
+     <!--</div>-->
 
-     <div id="aa">
-       <div id="messages"></div>
-       <div id="msg">
-        <!-- 发送文字消息 -->
-         <input @click="changeMsgType" type="button" value="文字" name="">
-         <input id="word" v-if="msgtype=='text'" type="text" name="">
-         <!-- 语音消息 -->
-         <input id="recordBtn" type="button" v-show="msgtype=='sound'" value="录制消息" name="">
-         <input type="button" v-if="msgtype=='text'" value="发送" name="">
-       </div>
-     </div>
+     <!--<div id="aa">-->
+       <!--<div id="messages"></div>-->
+       <!--<div id="msg">-->
+        <!--&lt;!&ndash; 发送文字消息 &ndash;&gt;-->
+         <!--<input @click="changeMsgType" type="button" value="文字" name="">-->
+         <!--<input id="word" v-if="msgtype=='text'" type="text" name="">-->
+         <!--&lt;!&ndash; 语音消息 &ndash;&gt;-->
+         <!--<input id="recordBtn" type="button" v-show="msgtype=='sound'" value="录制消息" name="">-->
+         <!--<input type="button" v-if="msgtype=='text'" value="发送" name="">-->
+       <!--</div>-->
+     <!--</div>-->
 
 
-     <!-- 创建一个audio -->
-     <div id="msgt">
-       <!-- 语音消息临时显示 -->
-     </div>
-     <div id="talkbubble"></div>
+     <!--&lt;!&ndash; 创建一个audio &ndash;&gt;-->
+     <!--<div id="msgt">-->
+       <!--&lt;!&ndash; 语音消息临时显示 &ndash;&gt;-->
+     <!--</div>-->
+     <!--<div id="talkbubble"></div>-->
 
     <router-view/>
   </div>
@@ -47,44 +47,44 @@ let socket = null;
 
 export default {
   mounted(){
-    //挂载完成开始初始化客户端
-
-    /**
-    * 1.连接socket
-    * 2.获取需要操作的HTML元素,并添加相应的业务代码
-    */
-
-    Record.getUserMedia();
-    let mgst = document.getElementById('msgt');
-    
-    this.socket = io('localhost:3000');
-    socket = this.socket;
-    var self = this;
-    this.socket.on('connect', function(){
-      //服务器连接成功
-    })  
-
-
-    this.socket.on('uploadsuccess', function(url){
-      //收到服务端推送过来的语音消息,创建播放的空间
-      let audioContainer = document.createElement('div');
-      let playBtn = document.createElement('button');
-      let audio = document.createElement('audio');
-
-      audioContainer.className = 'sound-msg-container';
-      playBtn.style.width = "40px";
-      playBtn.style.height = "20px";
-      playBtn.style.backgroundColor = "transparent";
-
-      audio.src = url;
-      playBtn.onmousedown = function(e){
-        audio.play();
-      }
-
-      audioContainer.appendChild(playBtn);
-      audioContainer.appendChild(audio);
-      mgst.appendChild(audioContainer);
-    })
+    // //挂载完成开始初始化客户端
+    //
+    // /**
+    // * 1.连接socket
+    // * 2.获取需要操作的HTML元素,并添加相应的业务代码
+    // */
+    //
+    // Record.getUserMedia();
+    // let mgst = document.getElementById('msgt');
+    //
+    // this.socket = io('localhost:3000');
+    // socket = this.socket;
+    // var self = this;
+    // this.socket.on('connect', function(){
+    //   //服务器连接成功
+    // })
+    //
+    //
+    // this.socket.on('uploadsuccess', function(url){
+    //   //收到服务端推送过来的语音消息,创建播放的空间
+    //   let audioContainer = document.createElement('div');
+    //   let playBtn = document.createElement('button');
+    //   let audio = document.createElement('audio');
+    //
+    //   audioContainer.className = 'sound-msg-container';
+    //   playBtn.style.width = "40px";
+    //   playBtn.style.height = "20px";
+    //   playBtn.style.backgroundColor = "transparent";
+    //
+    //   audio.src = url;
+    //   playBtn.onmousedown = function(e){
+    //     audio.play();
+    //   }
+    //
+    //   audioContainer.appendChild(playBtn);
+    //   audioContainer.appendChild(audio);
+    //   mgst.appendChild(audioContainer);
+    // })
   },
   created(){
 

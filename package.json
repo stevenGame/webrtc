@@ -7,11 +7,15 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "server": "node server.js"
   },
   "dependencies": {
+    "admin-lte": "^2.4.3",
+    "jquery": "^3.3.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webrtc-adapter": "^6.1.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -28,8 +32,10 @@
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
+    "formidable": "latest",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "mime": "latest",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -38,6 +44,8 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "recorderjs": "git+https://github.com/mattdiamond/Recorderjs.git",
+    "recordrtc-nodejs": "^1.0.6",
+    "recordrtc": "latest",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
