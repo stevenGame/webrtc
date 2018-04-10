@@ -127,7 +127,7 @@ export default {
 
     mounted(){
         //挂载完成开始初始化客户端
-
+        console.log("runned Hello world mounted>>>")
         /**
          * 1.连接socket
          * 2.获取需要操作的HTML元素,并添加相应的业务代码

@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# idea IDE
+## Directory-based project format:
 .idea/
+
+# uploads
+uploads/

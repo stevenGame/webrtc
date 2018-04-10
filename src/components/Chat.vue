@@ -22,7 +22,7 @@
 
     export default {
         mounted: () => {
-            console.log("mount chats element >>>>>>")
+
             var mediaSource = new MediaSource();
             mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
             var mediaRecorder;
