@@ -28,20 +28,20 @@ WebRTC server use easyRTC as server need be config in
 machine
 ```json
 {
-    '/rtc': {
-        'target': 'http://your-webtrc-p2p-server:8080',
-        'secure': false,
-        'changeOrigin': true,
-        'pathRewrite': {
-            '^/rtc': ''
+    "/rtc": {
+        "target": "http://your-webtrc-p2p-server:8080",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/rtc": ""
         }
      },
-    '/socket.io': {
-        'target': 'http://your-webtrc-p2p-server:8080/socket.io',
-        'secure': false,
-        'changeOrigin': true,
-        'pathRewrite': {
-            '^/socket.io': ''
+    "/socket.io": {
+        "target": "http://your-webtrc-p2p-server:8080/socket.io",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/socket.io": ""
         }
     }
 }
