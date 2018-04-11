@@ -53,7 +53,7 @@ $ node server.js
 ```
 ## TODO
 - [ ] combine to webrtc record server and p2p server
-- [ ] copy p2p server code to project root folder
+- [x] copy p2p server code to project root folder
       name server_example to p2pserver
 - [ ] deploy document
 > For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
