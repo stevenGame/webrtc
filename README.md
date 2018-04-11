@@ -4,10 +4,7 @@
 
 ## Build Setup
 
-```bash
-# run chat audio/video file server
-$ npm run server
-```
+
 ``` bash
 # install dependencies
 npm install
@@ -22,6 +19,17 @@ npm run build
 npm run build --report
 ```
 ## Run servers
+There are two micro services serve chat audio message or real time
+call
+* audio record server
+* WebRTC p2p server
+### run audio record server
+
+```bash
+# run chat audio/video file server
+$ npm run server
+```
+
 ### Run WebRTC p2p server
 WebRTC server use easyRTC as server need be config in
 ```config/index.js``` proxy table if need comminute with other
@@ -56,4 +64,5 @@ $ node server.js
 - [ ] copy p2p server code to project root folder
       name server_example to p2pserver
 - [ ] deploy document
+
 > For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

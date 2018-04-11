@@ -11,9 +11,12 @@
     "server": "node server.js"
   },
   "dependencies": {
+    "async": "0.2.x",
+    "colors": "*",
     "admin-lte": "^2.4.3",
     "jquery": "^3.3.1",
     "moment": "^2.22.0",
+    "underscore": "1.5.x",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
