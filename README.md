@@ -56,13 +56,13 @@ machine
 
 ```
 ```bash
-$ cd p2pserver
+$ cd p2p_server
 $ node server.js
 ```
 ## TODO
-- [ ] combine to webrtc record server and p2p server
-- [ ] copy p2p server code to project root folder
-      name server_example to p2pserver
-- [ ] deploy document
+- [ ] combine to webrtc record server and p2p server use express
+- [x] copy p2p server code to project root folder
+- [ ] rewrite javascript version to vue version disable javascript hooks
+- [ ] install and deploy instraction/document
 
 > For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
