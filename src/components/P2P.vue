@@ -164,7 +164,7 @@
                     that.call_status = that.p2p_status.CALLING
                 });
 
-                easyrtc.setOnStreamClosed(function (easyrtcid) {
+                easyrtc.setOnStreamClosed(function () {
                     easyrtc.setVideoObjectSrc(document.getElementById("callerAudio"), "");
                     that.call_status = that.p2p_status.READ_TO_CALL
                 });
@@ -176,6 +176,16 @@
                 easyrtc.hangupAll();
 
             },
+            /**
+             * TODO: need maintain callback in function onIncomingCall(easyrtcid, callback)
+             *       call stack
+             */
+            rejectCall() {
+                if (this.onAcceptCall) {
+                    this.onAcceptCall(false)
+                }
+            }
+            ,
             performCall(otherEasyrtcid) {
                 var that = this;
                 easyrtc.hangupAll();
@@ -185,7 +195,7 @@
                     }
                 };
                 var successCB = function () {
-                    that.call_status;
+                    that.call_status = that.p2p_status.CALLING;
                     // TODO: accept up logic
                     console.log('hangup')
                 };
