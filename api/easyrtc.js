@@ -8888,4 +8888,4 @@ return new Easyrtc();
 return easyrtc;
 
 })); // end of module wrapper
-;
+
