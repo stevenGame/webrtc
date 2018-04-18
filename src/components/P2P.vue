@@ -104,7 +104,7 @@
 
             // TODO: find way to load easyrtc and socket.io in vue js
             //       remove timeout function
-            setTimeout(this.init, 1500)
+            setTimeout(this.init, 2500)
 
         },
         destroyed() {

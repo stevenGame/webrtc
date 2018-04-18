@@ -1,0 +1,10 @@
+{
+    "name":"junri-phone",
+    "version":"1.0.0",
+    "main":"index.html",
+    "window":{
+      "min_width":400,
+      "min_height":400,
+      "icon":"dialer.png"
+    }
+  }

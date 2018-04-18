@@ -64,4 +64,5 @@ typings/
 uploads/
 
 # dist folder
-dist/
+dist/static
+pcapp/dist
