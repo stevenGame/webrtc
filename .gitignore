@@ -62,3 +62,6 @@ typings/
 
 # uploads
 uploads/
+
+# dist folder
+dist/

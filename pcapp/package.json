@@ -1,0 +1,13 @@
+{
+    "name":"jr-phone",
+    "version":"1.0.0",
+    "devDependencies":{
+      "nw":"^0.18.2",
+      "nw-builder":"^3.1.2"
+    },
+    "scripts":{
+      "dev":"nw ../dist",
+      "win":"nwbuild --platforms win64 --buildDir dist/ ../dist",
+      "prod":"nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+    }
+  }
