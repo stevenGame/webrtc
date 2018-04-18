@@ -64,5 +64,9 @@ $ node server.js
 - [x] copy p2p server code to project root folder
 - [ ] rewrite javascript version to vue version disable javascript hooks
 - [ ] install and deploy instraction/document
+- [x] windows NW.js integration
+- [ ] change NW.js build script merge it can be run on
+      source root folder
+
 
 > For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
