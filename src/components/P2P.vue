@@ -84,6 +84,7 @@
 
 <script>
 
+    var P2P_SERVER_URL = 'http://192.168.1.88:8080'
 
     export default {
 
@@ -96,8 +97,8 @@
                 document.head.appendChild(recaptchaScript)
             };
 
-            loadJs('/socket.io/socket.io.js');
-            loadJs('/rtc/easyrtc/easyrtc.js')
+            loadJs(`${P2P_SERVER_URL}/socket.io/socket.io.js`);
+            loadJs(`${P2P_SERVER_URL}/easyrtc/easyrtc.js`)
         },
         mounted() {
 
@@ -163,7 +164,8 @@
                     easyrtc.setVideoObjectSrc(audio, stream);
                     that.call_status = that.p2p_status.CALLING
                 });
-
+                // 
+                easyrtc.setSocketUrl("http://192.168.1.88:8080");
                 easyrtc.setOnStreamClosed(function () {
                     easyrtc.setVideoObjectSrc(document.getElementById("callerAudio"), "");
                     that.call_status = that.p2p_status.READ_TO_CALL

@@ -19,23 +19,8 @@ module.exports = {
                 pathRewrite: {
                     '^/api': ''
                 }
-            },
-            '/rtc': {
-                target: 'http://localhost:8080',
-                secure: false,
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/rtc': ''
-                }
-            },
-            '/socket.io': {
-                target: 'http://localhost:8080/socket.io',
-                secure: false,
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/socket.io': ''
-                }
             }
+
             // pathRewrite: {'^/api': ''}
             // '/uploads':{
             //     target:'http://localhost:9001',
