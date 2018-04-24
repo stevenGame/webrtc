@@ -41,6 +41,15 @@ after runed p2p server change vue P2P componets `src/components/P2P.vue`
 ```js
 var P2P_SERVER_URL = http://your-p2p-server:port
 ```
+### How to Package to PC app
+Test only windows 64-bit environment read
+
+```bash
+# disbutie all platform
+$ cd pcapp
+$ npm insall
+$ npm run prod
+```
 
 ## TODO
 - [ ] combine to webrtc record server and p2p server use express
