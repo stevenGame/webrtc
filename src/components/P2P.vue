@@ -84,7 +84,7 @@
 
 <script>
 
-    var P2P_SERVER_URL = 'http://192.168.1.88:8080'
+    var P2P_SERVER_URL = 'http://localhost:8080'
 
     export default {
 
@@ -165,7 +165,7 @@
                     that.call_status = that.p2p_status.CALLING
                 });
                 // 
-                easyrtc.setSocketUrl("http://192.168.1.88:8080");
+                easyrtc.setSocketUrl(P2P_SERVER_URL);
                 easyrtc.setOnStreamClosed(function () {
                     easyrtc.setVideoObjectSrc(document.getElementById("callerAudio"), "");
                     that.call_status = that.p2p_status.READ_TO_CALL

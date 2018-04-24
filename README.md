@@ -31,34 +31,17 @@ $ npm run server
 ```
 
 ### Run WebRTC p2p server
-WebRTC server use easyRTC as server need be config in
-```config/index.js``` proxy table if need comminute with other
-machine
-```json
-{
-    "/rtc": {
-        "target": "http://your-webtrc-p2p-server:8080",
-        "secure": false,
-        "changeOrigin": true,
-        "pathRewrite": {
-            "^/rtc": ""
-        }
-     },
-    "/socket.io": {
-        "target": "http://your-webtrc-p2p-server:8080/socket.io",
-        "secure": false,
-        "changeOrigin": true,
-        "pathRewrite": {
-            "^/socket.io": ""
-        }
-    }
-}
-
-```
+setup Web RTC server
 ```bash
 $ cd p2p_server
+$ npm install
 $ node server.js
 ```
+after runed p2p server change vue P2P componets `src/components/P2P.vue`
+```js
+var P2P_SERVER_URL = http://your-p2p-server:port
+```
+
 ## TODO
 - [ ] combine to webrtc record server and p2p server use express
 - [x] copy p2p server code to project root folder

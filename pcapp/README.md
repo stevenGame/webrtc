@@ -5,7 +5,7 @@
 $ npm install
 ```
 
-### build excutable file
+### build excitable file
 ```bash
 # build vue app from source root folder first
 $ cd ..
